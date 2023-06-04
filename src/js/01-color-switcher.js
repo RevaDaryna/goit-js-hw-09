@@ -6,7 +6,8 @@ function getRandomHexColor() {
 
 const startBtn = document.querySelector('[data-start]');
 const stopBtn = document.querySelector('[data-stop]');
-stopBtn.disabled = true
+stopBtn.disabled = true;
+let timerId = null
 
 startBtn.addEventListener('click', onChangeBgColorBtn);
 stopBtn.addEventListener('click', onStopChangeBgColorBtn);
@@ -17,13 +18,13 @@ function onChangeBgColorBtn() {
         document.body.style.background = currentColor;
     }, 1000);
     startBtn.disabled = true;
-    stopBtn.disabled = false
+    stopBtn.disabled = false;
 }
 
 function onStopChangeBgColorBtn() {
     clearInterval(timerId);
+    startBtn.disabled = false;
     stopBtn.disabled = true;
-    startBtn.disabled = false
 } 
 
 startBtn.style.padding = '10px 15px';
