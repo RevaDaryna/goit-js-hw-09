@@ -24,7 +24,7 @@ function onStopChangeBgColorBtn() {
     clearInterval(timerId);
     stopBtn.disabled = true;
     startBtn.disabled = false
-}
+} 
 
 startBtn.style.padding = '10px 15px';
 stopBtn.style.padding = '10px 15px';
